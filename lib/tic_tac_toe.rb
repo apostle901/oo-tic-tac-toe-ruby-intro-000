@@ -70,9 +70,8 @@ class TicTacToe
   end
 
   def winner
-    result = won?
-    return @board[result.first] if result
-    return
+    result = won? || return nil
+    @board[result.first]
   end
 
   def play
